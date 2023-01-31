@@ -1,0 +1,17 @@
+---
+- name: installing web servers
+  hosts: web
+  tasks: 
+    - name: httpd package installation
+      yum: 
+        name: httpd
+        state: present
+    - name: correct index.html is present
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+    - name: httpd is started
+      service:
+        name: httpd
+        state: started
+        enabled: true
