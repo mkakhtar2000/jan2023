@@ -1,6 +1,7 @@
 ---
 - name: installing web servers
   hosts: 192.168.2.234
+  remote_user: docker
   tasks: 
     - name: httpd package installation
       yum: 
