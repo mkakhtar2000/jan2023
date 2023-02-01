@@ -8,5 +8,5 @@
          dest=/opt/feb1.txt state=touch
     - name: copy a file
       copy:
-        src=/opt/feb1.txt dest=/works/  
+        src=/opt/feb1.txt dest=/tmp/  
   
