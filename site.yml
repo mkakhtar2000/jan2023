@@ -1,6 +1,6 @@
 ---
 - name: installing web servers
-  hosts: web
+  hosts: 192.168.2.234
   tasks: 
     - name: httpd package installation
       yum: 
