@@ -1,0 +1,12 @@
+---
+- name: This play book will create and copy a file to the target servers
+  hosts: all
+  remote_user: docker
+  tasks:
+    - name: create an empty file
+      file:
+         dest=/opt/feb1.txt state=touch
+    - name: copy a file
+      copy:
+        src=/opt/feb1.txt dest=/works/  
+  
